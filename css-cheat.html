@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./Resources/images/CSS-Favicon.png" type="image/png" rel="icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="./Resources/CSS/reset.css" type="text/css" rel="stylesheet" />
+        <link href="./Resources/CSS/styles.css" type="text/css" rel="stylesheet" />
+        <link href="./Resources/CSS/css-cheat.css" type="text/css" rel="stylesheet" />
+        <title>CSS Cheatsheet</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./html-cheat.html">HTML</a></li>
+                    <li><a href="#" id="on-page">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <div class="quick-nav-container">
+            <h2>QuickNav</h2>
+            <div class="quicknav-list-container">
+                <p class="open-arrow">&gt;</p>
+                <div class="quicknav-list">
+                    <ul>
+                        <li><a href="#select-section">Selectors</a></li>
+                        <li><a href="#visual-section">Visual Rules</a></li>
+                        <li><a href="#box-section">Box Model</a></li>
+                        <li><a href="#position-section">Positioning</a></li>
+                        <li><a href="#color-section">Colors</a></li>
+                        <li><a href="#type-section">Typography</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <div class="css-container">
+            <h1 id="table-top">CSS Cheatsheet</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="left">
+                            Selector/Rule
+                        </th>
+                        <th class="middle">
+                            Syntax
+                        </th>
+                        <th class="right">
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3" class="section-header" id="select-section">
+                            <p>Selectors</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors" target="_blank" class="selector-link">Universal Selector</a>
+                            </p>
+                        </td>
+                        <td>
+                            * {<br><br>
+                            }
+                        </td>
+                        <td>
+                            Selects <span>all</span> elements.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors" target="_blank" class="selector-link">Type Selector</a>
+                        </td>
+                        <td>
+                            <p>
+                                span {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects all <span>span</span> elements.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="_blank" class="selector-link">Class Selector</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                .introduction {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects all elements that have the <span>"introduction"</span> class.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors" target="_blank" class="selector-link">ID Selector</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                #menu-button {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects the element that has the <span>"menu-button"</span> id.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target="_blank" class="selector-link">Attribute Selector</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                [controls] {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            Selects all elements that have the <span>controls</span> attribute.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header">
+                            <p>
+                                Grouping Selectors
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list" target="_blank" class="selector-link">List Selector</a>
+                            </p>
+                        </td>
+                        <td>
+                            span, div {<br><br>
+                            }
+                        </td>
+                        <td>
+                            <p>
+                                Selects all <span>&lt;span&gt;</span> and <span>&lt;div&gt;</span> elements.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                       <td colspan="3" class="section-header">
+                        <p>
+                            Combinators
+                        </p>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator" target="_blank" class="selector-link">Descendant Combinator</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                div p {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects all <span>&lt;p&gt;</span> elements that are nested inside a <span>&lt;div&gt;</span> element.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator" target="_blank" class="selector-link">Child Combinator</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                ul > li {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects all <span>&lt;li&gt;</span> that are nested directly inside a <span>&lt;ul&gt;</span> element.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator" target="_blank" class="selector-link">General Sibling Combinator</a>
+                            </p> 
+                        </td>
+                        <td>
+                            <p>
+                                p ~ span {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects all <span>&lt;span&gt;</span> elements that follow a <span>&lt;p&gt;</span> element.  
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator" target="_blank" class="selector-link">Adjacent Sibling Combinator</a>
+                                </a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                h2 + p {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Selects the first <span>&lt;p&gt;</span> element that immediately follows an <span>&lt;h2&gt;</span> element.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Column_combinator" target="_blank" class="selector-link">Column Combinator</a>
+                            </p>
+                        </td>
+                        <td>
+                            col || td {<br><br>
+                            }
+                        </td>
+                        <td>
+                            <p>
+                                Selects all <span>&lt;td&gt;</span> elements that belong to the scope of the <span>&lt;col&gt;</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header">Pseudo-Classes and Pseudo-Elements</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank" class="selector-link">Pseudo-Classes</a>
+                            </p>
+                        </td>
+                        <td>
+                            a:hover {<br><br>
+                            }
+                        </td>
+                        <td>
+                            <p>
+                                The <span>:</span> pseudo allow the selection of elements based on state information. <span>a:hover</span> selects all <span>&lt;a&gt;</span> elements
+                                when the user mouses over them.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p> 
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank" class="selector-link">Pseudo-Elements</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                p::first-line {<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Represents entities that are no included in HTML. <span>p::first-line</span> will select the first line of all <span>&lt;p&gt;</span> elements.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header" id="visual-section">
+                            <p>
+                                Visual Rules
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank" class="selector-link">Color</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                color: lightblue;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the foreground color of an element's text.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank" class="selector-link">Background Color</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                background-color: red;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the background color of an element. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity" target="_blank" class="selector-link">Opacity</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                opacity: 0.5;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the opacity of an element with <span>0</span> being transparent and <span>1</span> being opaque.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image" target="_blank" class="selector-link">Background Image</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                background-image: url(./imagelocation);
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the background image on an element.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/important" target="_blank" class="selector-link">!important</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                color: red !important;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Marks the declaration as important. This will override all other rules regardless of specificity. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header" id="box-section">
+                            The Box Model
+                        </td>
+                    </tr>
+                </tbody>
+                    <tr>
+                        <td scope="col" class="left">
+                            Parts
+                        </td>
+                        <td scope="col" class="middle">
+                            Description
+                        </td>
+                        <td scope="col" class="right">
+                            Rules
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model" target="_blank" class="selector-link">Content Box</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The area where your content is displayed
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                sized using: <span>inline-size</span> and <span>block-size</span> and <span>width</span> or <span>height</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model" target="_blank" class="selector-link">Padding Box</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The padding sits around the content as white space.
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                sized using <span>padding</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model" target="_blank" class="selector-link">Border Box</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The border box wraps the content and any padding
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sized using <span>border</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model" target="_blank" class="selector-link">Margin Box</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The margin is the outermost layer, wrapping the content, padding and border as whitespace between this box and other elements.
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sized using <span>margin</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header" id="position-section">
+                            Display and Positioning
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="left">
+                            Selector/Value
+                        </td>
+                        <td scope="col" class="middle">
+                            Syntax
+                        </td>
+                        <td scope="col" class="right">
+                            Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank" class="selector-link">Position</a>
+                             </p>
+                        </td>
+                        <td>
+                            <p>
+                                position: value;
+                            </p>
+                        </td>
+                        <td>
+                            Sets how an element is positioned in a document.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank" class="selector-link">Relative</a>
+                             </p>
+                        </td>
+                        <td>
+                            <p>
+                                position: relative;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The element is positioned according to the normal flow of the document then offset raltive to its default position.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank" class="selector-link">Absolute</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                position: absolute;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The element is removed from the normal flow and no space is created for the element. It is positioned relatice to its closest
+                                positioned ancestor.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank" class="selector-link">Fixed</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                position: fixed;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The element is removed from the normal flow and no space is created. The element is fixed in position relative to its initial containing block.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank" class="selector-link">Sticky</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                position: sticky;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The element is positioned according to the normal flow of the document and then offset relative to its nearest scrolling ancestor and containing block.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header" id="color-section">Color</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="left">Model</td>
+                        <td scope="col" class="middle">Syntax</td>
+                        <td scope="col" class="right">Description</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color" target="_blank" class="selector-link">Hex Color</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                #FFFFFF
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Hexidecimal is a number system. Ranges from <span>0 - 9</span> and <span>A - F</span> starts with the <span>#</span> symbol.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba" target="_blank" class="selector-link">rgba</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                rgba(255, 60, 40, 0.5);
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Within the parentheses is one value for <span>red</span>, one for <span>green</span>, one for <span>blue</span>, and one for <span>alpha</span>
+                                values for color range from <span>0 - 255</span>, and alpha ranges from <span>0 - 1</span>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsla" target="_blank" class="selector-link">hsla</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                hsla(180, 50%, 50%, 0.5);
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                The values in the parentheses are Hue, Saturation, lightness and alpha. Hue is the angle on the color wheel. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color" target="_blank" class="selector-link">Named Color</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                color: orange;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                You can select from CSS' limited named colors. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="section-header" id="type-section">Typeography</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="left">
+                            Rule
+                        </td>
+                        <td scope="col" class="middle">
+                            Syntax
+                        </td>
+                        <td scope="col" class="right">
+                            Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" target="_blank" class="selector-link">Font Weight</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                font-weight: bold;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the weight (thinckness) of the font.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style" target="_blank" class="selector-link">Font Style</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                font-style: italic;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the style of the font with either <span>normal</span>, <span>italic</span>, or <span>oblique</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" target="_blank" class="selector-link">Line Height</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                line-height: 1.5;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the height of a line box.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing" target="_blank" class="selector-link">Word Spacing</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                word-spacing: 2px;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the length of space between words and tags.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" target="_blank" class="selector-link">Letter Spacing</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                letter-spacing: 2px;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Sets the length of space between individual characters.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank" class="selector-link">Text Align</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                text-align: center;
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                sets the horizontal alignment of in-line level elements.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" target="_blank" class="selector-link">@Font Face</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                @font face {<br><br>
+                                font-family: sans;<br><br>
+                                src:url("./fonts/font.woff") format("woff");<br><br>
+                                }
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Specifies a custom font with which to display text.
+                            </p>
+                        </td>
+                    </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <p><a href="#table-top" id="top-link">Top</a></p>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+          </div>
+        </main>
+        <footer>
+            <h3>Coded by Fyddlestix</h3>
+        </footer>
+    </body>
+</html>

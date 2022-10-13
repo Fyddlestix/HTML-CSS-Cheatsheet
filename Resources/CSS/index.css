@@ -1,0 +1,46 @@
+#index-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: hsl(240, 5%, 23%);
+    border: 1px solid hsl(240, 5%, 23%);
+    border-radius: 10px;
+    box-shadow: black 2px 2px 5px;
+    margin: 0 auto;
+    text-align: center ;
+    top: 110px;
+}
+
+.mdn-link {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    top: 180px;
+    transition: color 500ms;
+}
+
+.mdn-link:hover {
+    color:hsl(240, 5%, 13%);
+}
+
+h1, p {
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+    font-size: 1.5rem;
+    text-shadow: black 5px 5px 5px;
+}
+
+p {
+    position: relative;
+    top: 110px;
+}
+
+@media only screen and (max-width: 400px) {
+    #index-container {
+        width: 260px;
+    }
+}

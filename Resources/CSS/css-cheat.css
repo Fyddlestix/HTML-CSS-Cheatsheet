@@ -1,0 +1,176 @@
+.css-container {
+    position: relative;
+    width: 600px;
+    height: 700px;
+    background-color: hsl(240, 5%, 23%);
+    border: 1px solid hsl(240, 5%, 23%);
+    border-radius: 10px 0 0 10px;
+    box-shadow: black 2px 2px 5px;
+    margin: 0 auto;
+    top: 60px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* QuickNav Box */
+
+.quick-nav-container {
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    top: 110px;
+    left: 175px;
+    background-color: hsl(240, 5%, 23%);
+    border: 1px solid hsl(240, 5%, 23%);
+    border-radius: 0 10px 10px 0;
+    box-shadow: black 2px 2px 5px;
+}
+
+.quick-nav-container h2 {
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    text-align: center;
+    top: 10px;
+    text-shadow: hsl(240, 5%, 13%) 5px 5px 5px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+.quicknav-list-container {
+    position: absolute;
+    top: 80px;
+    width: 20px;
+    height: 200px;
+    background-color: hsl(240, 5%, 23%);
+    border: 1px solid hsl(240, 5%, 23%);
+    border-radius: 0 10px 10px 0;
+    box-shadow: black 2px 2px 5px;
+    overflow: hidden;
+    transition: width 500ms ease-out;
+}
+
+.open-arrow {
+    color: white;
+    position: relative;
+    top: 80px;
+    left: 5px;
+    font-weight: bold;
+    transition: opacity 500ms;
+}
+
+.quicknav-list {
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    line-height: 2;
+    opacity: 0;
+    min-width: 250px;
+    transition: opacity 500ms ease-in, left 500ms ease-out;
+}
+
+.quicknav-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.quicknav-list-container:hover {
+    width: 250px;
+    cursor: pointer;
+}
+
+.quicknav-list-container:hover .quicknav-list {
+    opacity: 1;
+    left: 50px;
+}
+
+.quicknav-list-container:hover .open-arrow {
+    opacity: 0;
+}
+
+.quicknav-list a:hover {
+    color: hsl(240, 5%, 13%);
+}
+
+/* Table */
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    text-shadow: hsl(240, 5%, 13%) 5px 5px 5px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    font-size: 1.5rem;
+}
+
+table {
+    position: relative;
+    top: 70px;
+    bottom: 20px;
+    margin: 0 auto;
+    color: white;
+}
+
+.left {
+    border: 1px solid white;
+    padding: 10px;
+    width: 150px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.middle {
+    border: 1px solid white;
+    padding: 10px;
+    width: 150px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.right {
+    border: 1px solid white;
+    padding: 10px;
+    width: 150px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.section-header {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.8rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+#top-link {
+    color: white;
+    transition: color 500ms;
+}
+
+#top-link:hover {
+    color: hsl(240, 5%, 13%);
+}
+
+.selector-link {
+    color: white;
+    text-decoration: none;
+    transition: color 500ms;
+}
+
+.selector-link:hover {
+    color: hsl(240, 5%, 13%);
+}
