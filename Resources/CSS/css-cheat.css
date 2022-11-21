@@ -174,3 +174,15 @@ span {
 .selector-link:hover {
     color: hsl(240, 5%, 13%);
 }
+
+@media only screen and (max-width: 1460px) {
+    .quicknav-list-container {
+        visibility: hidden;
+    }
+    .quicknav-list-container h2 {
+        visibility: hidden;
+    }
+    .quick-nav-container {
+        visibility: hidden;
+    }
+}
