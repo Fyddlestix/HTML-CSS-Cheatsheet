@@ -9,14 +9,15 @@ body {
     box-sizing: border-box;
     background-color: hsl(240, 0%, 15%);
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
 }
 
 /* Navigation Bar */
 
 nav {
+    height: 50px;
     background-color: hsl(240, 5%, 23%);
     box-shadow: black 0px 2px 2px;
-    height: 50px;
 }
 
 nav ul {
@@ -48,8 +49,6 @@ nav a:hover {
     background-color: hsl(240, 5%, 13%);
 }
 
-
-
 /* Footer */
 
 footer {
@@ -59,19 +58,14 @@ footer {
 }
 
 footer h3 {
-    text-align: center;
+    bottom: 50px;
     background-color: hsl(240, 5%, 23%);
     box-shadow: black 0px 2px 5px;
+    text-shadow: hsl(240, 5%, 13%) 5px 5px 5px;
     height: 40px;
     line-height: 40px;
     color: hsl(0, 0%, 100%);
+    text-align: center;
     font-family: 'Anton', sans-serif;
     letter-spacing: 1px;
-    text-shadow: hsl(240, 5%, 13%) 5px 5px 5px;
-}
-
-@media only screen and (max-width: 460px) {
-    nav li {
-        width: 80px;
-    }
 }
