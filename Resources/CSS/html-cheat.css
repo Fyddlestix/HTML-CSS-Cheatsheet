@@ -1,5 +1,3 @@
-
-
 .html-container {
     position: relative;
     width: 600px;
@@ -61,10 +59,12 @@ td {
     text-align: center;
     vertical-align: middle;
     font-size: 0.8rem;
+    line-height: 1.2;
 }
 
 span {
     font-weight: bold;
+    background-color: hsl(240, 5%, 13%);
 }
 
 #top-link {
@@ -85,7 +85,6 @@ span {
 #element-link:hover {
     color: hsl(240, 5%, 13%);
 }
-
 
 /* Quick Nav Box */
 
@@ -152,7 +151,6 @@ span {
     transition: color 500ms;
 }
 
-
 .quicknav-list-container:hover {
     width: 250px;
     cursor: pointer;
@@ -169,4 +167,16 @@ span {
 
 .quicknav-list a:hover {
     color: hsl(240, 5%, 13%);
+}
+
+@media only screen and (max-width: 1460px) {
+    .quicknav-list-container {
+        visibility: hidden;
+    }
+    .quicknav-list-container h2 {
+        visibility: hidden;
+    }
+    .quick-nav-container {
+        visibility: hidden;
+    }
 }
